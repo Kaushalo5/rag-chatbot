@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>RAG Chatbot — Demo</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>RAG Chatbot — Generate • Approve • Query</h1>
+      <p class="muted">Hybrid demo: generate a profile with Gemini, approve it, then ask the RAG.</p>
+    </header>
+
+    <main>
+      <section class="panel">
+        <h2>1) Generate a draft profile (Gemini)</h2>
+        <textarea id="generatePrompt" placeholder='e.g. Generate a 150-word profile for "Rohit Sharma" including a nickname line' rows="3"></textarea>
+        <div class="row">
+          <button id="generateBtn">Generate Draft</button>
+          <span id="genStatus" class="muted"></span>
+        </div>
+        <textarea id="draftPreview" placeholder="Draft will appear here..." rows="6"></textarea>
+        <div class="row small">
+          <input id="docIdForApprove" placeholder="doc_id for approve (e.g., rohit_1)" />
+          <button id="approveBtn">Approve & Add to KB</button>
+          <span id="approveStatus" class="muted"></span>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>2) Ask the knowledge base</h2>
+        <input id="queryInput" placeholder="Ask a question (e.g., Who is the God of Cricket?)" />
+        <div class="row">
+          <button id="askBtn">Ask</button>
+          <span id="askStatus" class="muted"></span>
+        </div>
+        <div id="answerBox" class="answer-box"></div>
+      </section>
+
+      <section class="panel">
+        <h2>3) Quick manual index (one-liner)</h2>
+        <textarea id="manualText" placeholder='Paste text to index manually (doc_id required below)' rows="3"></textarea>
+        <div class="row small">
+          <input id="manualDocId" placeholder="doc_id (e.g., manual_1)" />
+          <button id="manualIndexBtn">Index Text</button>
+          <span id="manualStatus" class="muted"></span>
+        </div>
+      </section>
+
+      <footer>
+        <small>Backend: http://localhost:8000 • Frontend served on 127.0.0.1:5500</small>
+      </footer>
+    </main>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>

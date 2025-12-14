@@ -1,0 +1,34 @@
+﻿:root{
+  --bg-1: #000;
+  --bg-2: #060609;
+  --muted-bg: #071018;
+  --card: #061216;
+  --text-main: #d9eaf0;
+  --text-muted: #8b97a2;
+  --accent: #2aa198;
+  --accent-dim: #1f7b66;
+  --glass: rgba(255,255,255,0.02);
+  --border: rgba(255,255,255,0.03);
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;background:linear-gradient(180deg,var(--bg-1),#071018);color:var(--text-main);-webkit-font-smoothing:antialiased}
+.container{max-width:980px;margin:28px auto;padding:18px}
+header h1{margin:0;font-size:20px;font-weight:600;color:var(--text-main)}
+header p.muted{color:var(--text-muted);margin:6px 0 18px;font-size:13px}
+.panel{background: linear-gradient(180deg, rgba(255,255,255,0.008), rgba(255,255,255,0.004));border: 1px solid var(--border);padding:14px;border-radius:10px;margin-bottom:12px;box-shadow: 0 6px 18px rgba(2,6,12,0.6);}
+.row{display:flex;gap:8px;align-items:center;margin-top:8px}
+.row.small{gap:6px}
+textarea, input{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.008));color:var(--text-main);outline:none;font-size:14px;transition:box-shadow .12s ease, border-color .12s ease;}
+textarea::placeholder, input::placeholder{color:rgba(140,150,160,0.5)}
+input{height:40px}
+button{background: linear-gradient(180deg, var(--accent), var(--accent-dim));color: #001b18;border: none;padding:8px 12px;border-radius:8px;cursor:pointer;font-weight:600;box-shadow: 0 4px 10px rgba(36,72,68,0.12), inset 0 -2px 0 rgba(0,0,0,0.06);}
+button:hover{transform:translateY(-1px);opacity:0.98}
+.muted{color:var(--text-muted);font-size:13px;margin-left:8px}
+.answer-box{margin-top:10px}
+.answer pre{white-space:pre-wrap;background: rgba(255,255,255,0.02);padding:10px;border-radius:8px;color:var(--text-main);border:1px solid rgba(255,255,255,0.02);font-size:14px;}
+.contexts .ctx{margin-top:8px;padding:8px;background: rgba(255,255,255,0.01);border-radius:6px;border:1px solid rgba(255,255,255,0.02);color:var(--text-muted);font-size:13px;}
+.contexts .ctx em{color:var(--text-main);font-style:normal;font-weight:600;margin-right:8px}
+.score{color:var(--text-muted);font-size:12px;margin-left:6px}
+.meta pre{background:rgba(255,255,255,0.01);padding:6px;border-radius:6px;color:var(--text-muted)}
+footer{color:var(--text-muted);margin-top:10px;font-size:13px}
+@media (max-width:700px){.container{padding:12px}header h1{font-size:18px}textarea,input{font-size:13px}button{padding:8px 10px}}

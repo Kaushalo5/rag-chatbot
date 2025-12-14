@@ -1,0 +1,30 @@
+# ---- Python ----
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+
+# ---- Virtual Environments ----
+.venv/
+venv/
+env/
+
+# ---- Environment Variables ----
+.env
+
+# ---- OS ----
+.DS_Store
+Thumbs.db
+
+# ---- IDE ----
+.vscode/
+.idea/
+
+# ---- Vector DB / Storage ----
+backend/app/storage/
+backend/app/storage/indexes/
+backend/app/storage/docs/
+
+# ---- Node / Frontend cache (if any later) ----
+node_modules/
